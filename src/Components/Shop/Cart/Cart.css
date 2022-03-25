@@ -1,0 +1,7 @@
+.cart-container {
+  background-color: antiquewhite;
+  padding: 30px;
+  border-radius: 10px;
+  position: sticky;
+  top: 0;
+}
