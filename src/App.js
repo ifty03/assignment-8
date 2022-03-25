@@ -5,7 +5,7 @@ import {Shop} from './Components/Shop/Shop';
 
 function App() {
   return (
-    <div>
+    <div style={{margin:"0px 30px"}}>
      <Shop></Shop>
     </div>
   );

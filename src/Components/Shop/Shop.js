@@ -35,6 +35,13 @@ const Shop = () => {
     }
 
     /*--------------------------
+        Clear selected item
+    ---------------------------*/
+    const clearSelectedItem =()=>{
+        setItem([])
+    }
+
+    /*--------------------------
          get random food 
     ----------------------------*/
     function getRandom(max) {
@@ -51,7 +58,7 @@ const Shop = () => {
     return (
         <Row className='mt-5'>
             <Col sm={12} lg={9}>
-            <Row className='ms-auto'>
+            <Row>
             {
                products.map(product=><Products selectedItem={selectedItem} key={product.id} product={product}></Products> )
             }
@@ -59,7 +66,7 @@ const Shop = () => {
             </Col>
 
             <Col sm={12} lg={3}>
-               <Cart getItem={getItem} item={item}></Cart>
+               <Cart clear={clearSelectedItem} getItem={getItem} item={item}></Cart>
             </Col>
         </Row>
     );
