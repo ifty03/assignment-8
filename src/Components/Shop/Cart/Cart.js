@@ -1,6 +1,7 @@
 import React from 'react';
 import { MdDeleteForever } from "react-icons/md";
 import { HiRefresh } from "react-icons/hi";
+import { BiSelectMultiple } from "react-icons/bi";
 import { GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import './Cart.css'
 
@@ -11,7 +12,7 @@ import './Cart.css'
 const Cart = ({item,getItem,clear}) => {
     return (
         <div className='cart-container'>
-            <h2 className='text-center'>This is cart</h2>
+            <h3 className='text-center mb-4 selected'>Selected Watch <span><BiSelectMultiple/></span></h3>
             {
                 item.map(meal=><h5 key={meal.id}> <span><img style={{width:"45px",borderRadius:"50%",height:"40px"}} src={meal.picture} alt="" /></span> 
                 
