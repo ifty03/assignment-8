@@ -4,6 +4,11 @@ import { IoMdCart } from "react-icons/io";
 import { Col } from 'react-bootstrap';
 import './Products.css'
 
+
+/* ---------------------------------
+  Every single product component
+---------------------------------- */
+
 const Products = (props) => {
     const {selectedItem,product}=props;
     const {name,picture,price}=product;
@@ -12,7 +17,7 @@ const Products = (props) => {
         <MDBCard className='product' style={{ maxWidth: '22rem' }}>
            <MDBCardImage src={picture} position='top' alt='this is food' />
         <MDBCardBody>
-           <MDBCardTitle>Organic Food</MDBCardTitle>
+           <MDBCardTitle>{name}</MDBCardTitle>
             <MDBCardText>
             Price: ${price}
            </MDBCardText>

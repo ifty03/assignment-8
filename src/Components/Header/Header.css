@@ -1,0 +1,11 @@
+.header-section {
+  height: 145px;
+  background-color: #333333;
+}
+.main-name {
+  font-weight: 600;
+  padding-top: 10px;
+}
+.clock {
+  font-size: 50px;
+}

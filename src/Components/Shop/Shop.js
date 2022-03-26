@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col,Row } from 'react-bootstrap';
+import { Alert, Col,Row } from 'react-bootstrap';
 import Cart from './Cart/Cart';
 import Products from './Products/Products';
 import './Shop.css'
@@ -17,6 +17,7 @@ const Shop = () => {
          get selected item
     -------------------------- */
     const [item,setItem]=useState([])
+    const [show,setShow]=useState(true);
     const selectedItem=(items)=>{
         const newItem = [...item,items];
         const exist = item.find(meal=>meal.id===items.id);
@@ -26,7 +27,7 @@ const Shop = () => {
                 setItem(newItem)
             }
             else{
-                alert("You reach maximaum")
+                alert("Opps... You reach maximaum...!")
             }
         }
         else{
