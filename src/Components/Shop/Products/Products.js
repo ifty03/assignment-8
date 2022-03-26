@@ -2,13 +2,14 @@ import React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
 import { IoMdCart } from "react-icons/io";
 import { Col } from 'react-bootstrap';
+import './Products.css'
 
 const Products = (props) => {
     const {selectedItem,product}=props;
     const {name,picture,price}=product;
     return (
         <Col className='mb-6' lg={4} sm={12} md={6}>
-        <MDBCard style={{ maxWidth: '22rem' }}>
+        <MDBCard className='product' style={{ maxWidth: '22rem' }}>
            <MDBCardImage src={picture} position='top' alt='this is food' />
         <MDBCardBody>
            <MDBCardTitle>Organic Food</MDBCardTitle>
