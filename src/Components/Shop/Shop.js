@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Alert, Col,Row } from 'react-bootstrap';
+import { Col,Row } from 'react-bootstrap';
 import Cart from './Cart/Cart';
 import Products from './Products/Products';
 import './Shop.css'
@@ -17,7 +17,6 @@ const Shop = () => {
          get selected item
     -------------------------- */
     const [item,setItem]=useState([])
-    const [show,setShow]=useState(true);
     const selectedItem=(items)=>{
         const newItem = [...item,items];
         const exist = item.find(meal=>meal.id===items.id);
@@ -50,9 +49,14 @@ const Shop = () => {
     }
     
     function getItem(items){
-        const randomIndex = getRandom(items.length);
-        let random = [items[randomIndex]];
-        setItem(random)
+        if(items.length){
+            const randomIndex = getRandom(items.length);
+            let random = [items[randomIndex]];
+            setItem(random)
+        }
+        else{
+            alert("Please select four item then click")
+        }
 
     }
 

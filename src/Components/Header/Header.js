@@ -2,6 +2,9 @@ import React from 'react';
 import { BsStopwatchFill } from "react-icons/bs";
 import './Header.css'
 
+/*------------------
+       navbar
+------------------ */
 const Header = () => {
     return (
         <div className='header-section'>
