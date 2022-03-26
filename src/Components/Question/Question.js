@@ -1,14 +1,14 @@
 import React from 'react';
-import { Accordion, Card, Table } from 'react-bootstrap';
+import { Accordion,Table } from 'react-bootstrap';
+import './Question.css'
 
 const Question = () => {
     return (
-        <div>
-            <h2 className='text-center'>Question & Answer</h2>
-            <Card>
-              <Card.Img style={{width:"100%",marginTop:"50px"}} variant="top" src="ReactJS.png" />
-            <Card.Body>
-            <Card.Text>
+        <div className='question-container'>
+        <h2 className='text-center m-4'>Question & Answer</h2>
+             <div className='question-image'>
+             <img src="ReactJS.png" alt="" />
+             </div>
               <Accordion defaultActiveKey={['0']} alwaysOpen>
                 <Accordion.Item eventKey="0">
                   <Accordion.Header>Q1:- How react works?</Accordion.Header>
@@ -64,9 +64,6 @@ const Question = () => {
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
-             </Card.Text>
-             </Card.Body>
-             </Card>
 
         </div>
     );

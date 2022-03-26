@@ -1,4 +1,4 @@
-# Dialing for Watch
+# Project name id 'Random Watch'
 
 Assignment Eight. with programming hero [Programming hero](https://www.programming-hero.com/)
 
